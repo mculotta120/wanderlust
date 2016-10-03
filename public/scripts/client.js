@@ -26,6 +26,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         templateUrl: "/views/routes/characters.html",
         controller: "homeController"
       }).
+      when("/content", {
+        templateUrl: "/views/routes/content.html",
+        controller: "homeController"
+      }).
       otherwise({
         redirectTo: "/home"
       });
