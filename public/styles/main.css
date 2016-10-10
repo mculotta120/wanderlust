@@ -74,6 +74,9 @@ a:link{
   font-family: 'Special Elite', cursive;
   padding: 10px;
 }
+#caption{
+  padding: 50px;  
+}
 .dropdown {
     position: relative;
     display: inline-block;
