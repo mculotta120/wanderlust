@@ -1,11 +1,20 @@
-<div id="pageArea">
+<div id="pageArea" ng-app="myApp">
   <div id="textArea">
+
       <h1>Artwork</h1>
       <div id="art">
-        <img src="/images/Issue001_Page001_FrontCover.jpg" alt="front cover issue # 001" height="800px" />
-<div id="caption">
-<p>  Curabitur nec pellentesque ipsum. Etiam finibus commodo ex sed fringilla. Vestibulum luctus, quam et viverra vehicula, tortor tellus iaculis nisl, sed egestas augue neque a quam. Duis fermentum sapien eu tincidunt dignissim. Curabitur accumsan ultrices magna, nec fermentum neque posuere vel. Proin elementum, quam rutrum tincidunt rhoncus, urna ante accumsan nulla, rhoncus consectetur velit erat sit amet turpis. Maecenas risus elit, euismod vel massa sit amet, porttitor venenatis odio. Donec condimentum velit et nibh sagittis, sed hendrerit lacus posuere. Integer nec dignissim quam. Integer sit amet enim id urna maximus ullamcorper. Aenean ultrices nunc a justo imperdiet, a convallis felis mollis. Nam molestie commodo enim, nec suscipit nisi laoreet et. Proin non viverra est. Suspendisse interdum id leo vitae placerat.</p>
-</div>
+          <div id="slides_control">
+            <div>
+              <carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                  <img ng-src="{{slide.image}}">
+                  <div class="carousel-caption">
+                    <h4>Slide {{$index+1}}</h4>
+                  </div>
+                </slide>
+              </carousel>
+            </div>
+          </div>
       </div>
   </div>
 </div>
