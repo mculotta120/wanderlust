@@ -3,6 +3,9 @@
       <h1>Artwork</h1>
       <div id="art">
           <img ng-src="{{currentSlide.image}}" width="400px">
+          <div id = "slideCaption">
+            {{currentSlide.caption}}
+          </div>
           <div id="carouselNav">
             <button type="button" name="prevButton" ng-click="prev()">Prev</button>
             <button type="button" name="nextButton" ng-click="next()">Next</button>

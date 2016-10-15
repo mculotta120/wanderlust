@@ -4,13 +4,16 @@ myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http 
   $scope.currentSlide = [];
   $scope.slides = [
     {
-      image: '/images/Issue001_Page001_FrontCover.jpg'
+      image: '/images/Issue001_Page001_FrontCover.jpg',
+      caption: 'Issue #001 front cover'
     },
     {
-      image: '/images/Issue002_Page001_FrontCover.jpg'
+      image: '/images/Issue002_Page001_FrontCover.jpg',
+      caption: 'Issue #002 front cover'
     },
     {
-      image: '/images/Issue003_Page001.jpg'
+      image: '/images/Issue003_Page001.jpg',
+      caption: 'Issue #003 front cover'
     }
   ];
 
