@@ -85,6 +85,9 @@ a:link{
 #definition{
 
 }
+#carouselNav{
+  margin-left: auto;
+}
 .dropdown {
     position: relative;
     display: inline-block;

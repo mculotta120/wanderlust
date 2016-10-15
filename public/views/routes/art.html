@@ -1,19 +1,11 @@
-<div id="pageArea" ng-app="myApp">
+<div id="pageArea" ng-app="myApp" ng-init="thisSlide()">
   <div id="textArea">
-
       <h1>Artwork</h1>
       <div id="art">
-          <div id="slides_control">
-            <div>
-              <carousel interval="myInterval">
-                <slide ng-repeat="slide in slides" active="slide.active">
-                  <img ng-src="{{slide.image}}">
-                  <div class="carousel-caption">
-                    <h4>Slide {{$index+1}}</h4>
-                  </div>
-                </slide>
-              </carousel>
-            </div>
+          <img ng-src="{{currentSlide.image}}" width="400px">
+          <div id="carouselNav">
+            <button type="button" name="prevButton" ng-click="prev()">Prev</button>
+            <button type="button" name="nextButton" ng-click="next()">Next</button>
           </div>
       </div>
   </div>

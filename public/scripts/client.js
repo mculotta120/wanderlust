@@ -1,6 +1,6 @@
 console.log("client.js is sourced");
 
-var myApp = angular.module('myApp', [ 'ngRoute'] );
+var myApp = angular.module('myApp', [ 'ngRoute', 'ui.bootstrap'] );
 
 console.log("is there a problem here?");
 

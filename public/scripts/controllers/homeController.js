@@ -1,6 +1,7 @@
-myApp.controller('homeController', [ '$scope', '$http', 'ui.bootstrap', function( $scope, $http ){
-  console.log("homeController");
-  $scope.myInterval = 3000;
+myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http ){
+  // console.log("homeController");
+  $scope.currentIndex = 0;
+  $scope.currentSlide = [];
   $scope.slides = [
     {
       image: '/images/Issue001_Page001_FrontCover.jpg'
@@ -13,4 +14,27 @@ myApp.controller('homeController', [ '$scope', '$http', 'ui.bootstrap', function
     }
   ];
 
+  $scope.thisSlide = function(){
+    console.log("currentSlide", $scope.currentSlide);
+    $scope.currentSlide = $scope.slides[$scope.currentIndex];
+  };
+
+  $scope.prev = function(){
+    console.log("prev");
+    $scope.currentIndex--;
+    if( $scope.currentIndex === -1 ){
+            $scope.currentIndex = 0;
+          }
+    console.log("index = ", $scope.currentIndex);
+    $scope.thisSlide();
+  };
+
+  $scope.next = function(){
+    console.log("next");
+    $scope.currentIndex++;
+    if( $scope.currentIndex == $scope.slides.length ){
+    $scope.currentIndex = 0;}
+    console.log("index = ", $scope.currentIndex);
+    $scope.thisSlide();
+  };
 }]);
