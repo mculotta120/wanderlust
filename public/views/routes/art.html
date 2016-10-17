@@ -3,13 +3,21 @@
       <h1>Artwork</h1>
       <div id="art">
           <img ng-src="{{currentSlide.image}}" width="400px">
-          <div id = "slideCaption">
-            {{currentSlide.caption}}
+          <div class="container" id="slideCaption">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h3> {{currentSlide.caption}} </h3>
+              </div>
+            </div>
           </div>
-          <div id="carouselNav">
-            <button type="button" name="prevButton" ng-click="prev()">Prev</button>
-            <button type="button" name="nextButton" ng-click="next()">Next</button>
+          <div class="container" id="carouselNav">
+            <div class="row">
+              <div class="col-md-12 text-center">
+              <button type="button" class="btn btn-warning" name="prevButton" ng-click="prev()">Prev</button>
+              <button type="button" class="btn btn-warning" name="nextButton" ng-click="next()">Next</button>
+            </div>
           </div>
+        </div>
       </div>
   </div>
 </div>
