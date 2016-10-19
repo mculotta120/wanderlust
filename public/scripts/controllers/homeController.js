@@ -1,4 +1,4 @@
-myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http ){
+myApp.controller('homeController', [ '$scope', '$http', '$interval', function( $scope, $http, $interval ){
   // console.log("homeController");
   $scope.currentIndex = 0;
   $scope.currentSlide = [];
@@ -17,10 +17,17 @@ myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http 
     }
   ];
 
+
   $scope.thisSlide = function(){
-    console.log("currentSlide", $scope.currentSlide);
+    // console.log("currentSlide", $scope.currentSlide);
     $scope.currentSlide = $scope.slides[$scope.currentIndex];
+    // iterate();
   };
+
+  //   iterate = function(){
+  //   $interval( nextOne(), 30000, 10);
+  //   console.log("changing slides");
+  // };
 
   $scope.prev = function(){
     console.log("prev");
@@ -28,8 +35,8 @@ myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http 
     if( $scope.currentIndex === -1 ){
             $scope.currentIndex = 0;
           }
-    console.log("index = ", $scope.currentIndex);
     $scope.thisSlide();
+
   };
 
   $scope.next = function(){
@@ -37,7 +44,8 @@ myApp.controller('homeController', [ '$scope', '$http', function( $scope, $http 
     $scope.currentIndex++;
     if( $scope.currentIndex == $scope.slides.length ){
     $scope.currentIndex = 0;}
-    console.log("index = ", $scope.currentIndex);
+    // console.log("index = ", $scope.currentIndex);
     $scope.thisSlide();
   };
+
 }]);
